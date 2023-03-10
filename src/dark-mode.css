@@ -1,0 +1,58 @@
+.MuiDataGrid-root {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .MuiDataGrid-row:hover {
+    background-color: #555;
+  }
+  
+  .MuiDataGrid-columnHeader,
+  .MuiDataGrid-cell {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .MuiDataGrid-columnHeader:hover {
+    background-color: #555;
+  }
+  
+  .MuiDataGrid-toolbar {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .MuiDataGrid-toolbar button {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  .MuiDataGrid-toolbar button:hover {
+    background-color: #666;
+  }
+  /* Set the background color of the entire grid to a dark color */
+.MuiDataGrid-root {
+    background-color: #1c1c1e;
+  }
+  
+  /* Set the background color of the header cells to a slightly lighter color */
+  .MuiDataGrid-colHeader {
+    background-color: #2c2c2e;
+  }
+  
+  /* Set the font color of the header cells to white */
+  .MuiDataGrid-colHeaderTitle {
+    color: #fff;
+  }
+  
+  /* Set the font color of the cells to white */
+  .MuiDataGrid-cell {
+    color: #fff;
+  }
+  
+  /* Set the background color of the selected cells to a brighter color */
+  .MuiDataGrid-cell--selected {
+    background-color: #444;
+  }
+  
+  
