@@ -7,9 +7,18 @@ import {
   GridColumnsPanel
 } from "@mui/x-data-grid-pro";
 import { useDemoData } from "@mui/x-data-grid-generator";
-import { Mouse } from "@mui/icons-material";
-import './dark-mode.css';
+
+
+
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+
 export default function DataGridProDemo() {
+  const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
   const { data } = useDemoData({
     dataSet: "Commodity",
     rowLength: 100000
@@ -28,34 +37,39 @@ export default function DataGridProDemo() {
 
   return (
     <Box sx={{ height: 520, width: "100%" }}>
-      <DataGridPro
-        {...data}
-        components={{ Toolbar: CustomToolbar }}
-        loading={data.rows.length === 0}
-        rowHeight={38}
-        className = "dark-mode"
-        componentsProps={{
+      <ThemeProvider theme={darkTheme}>
+        <CssBaseline />
+
+        <DataGridPro
+          {...data}
           
-          // columnMenu: {
-          //   sx: {
-          //     //Modify styling to columnMenu
-          //     color: "#ffffff",
-          //     backgroundColor: "#333333",
-              
-          //   }
-          // },
-          // filterPanel: {
-          //   sx: {
-          //     //Modify styling to filterPanel
-          //     color: "#ffffff",
-          //     backgroundColor: "#cccccc"  
-          //   }
+          components={{ Toolbar: CustomToolbar }}
+          loading={data.rows.length === 0}
+          rowHeight={38}
+          //className = "dark-mode"
+          componentsProps={{
             
-          
-          
-          // }
-        }}
-      />
+            // columnMenu: {
+            //   sx: {
+            //     //Modify styling to columnMenu
+            //     color: "#ffffff",
+            //     backgroundColor: "#333333",
+                
+            //   }
+            // },
+            // filterPanel: {
+            //   sx: {
+            //     //Modify styling to filterPanel
+            //     color: "#ffffff",
+            //     backgroundColor: "#cccccc"  
+            //   }
+              
+            
+            
+            // }
+          }}
+        />
+      </ThemeProvider>
     </Box>
   );
 }

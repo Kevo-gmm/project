@@ -2,6 +2,8 @@
   "dependencies": {
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/styles": "^4.11.5",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
     "@mui/x-data-grid": "^5.0.0",
@@ -15,10 +17,22 @@
   },
   "description": "https://github.com/mui/mui-x/blob/v5.17.22/docs/data/data-grid/overview/DataGridProDemo.tsx",
   "devDependencies": {
-    "react-scripts": "latest"
+    "react-scripts": "^5.0.1"
   },
   "main": "index.tsx",
   "scripts": {
     "start": "react-scripts start"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
